@@ -1,0 +1,7 @@
+name "sendgrid"
+description "SendGrid API wrapper for dlang"
+authors "Andrea Fontana"
+copyright "Copyright © 2023, Andrea Fontana"
+license "MIT"
+dependency "jsonwrap" version="~>1.0.5"
+x:ddoxTool "scod"

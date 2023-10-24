@@ -1,0 +1,15 @@
+.dub
+docs.json
+__dummy.html
+/sendgrid
+sendgrid.so
+sendgrid.dylib
+sendgrid.dll
+sendgrid.a
+sendgrid.lib
+sendgrid-test-*
+*.exe
+*.pdb
+*.o
+*.obj
+*.lst

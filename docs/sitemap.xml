@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url><loc>http://127.0.0.1/index.html</loc></url>
+<url><loc>http://127.0.0.1/sendgrid.html</loc></url>
+<url><loc>http://127.0.0.1/sendgrid/SendGrid.html</loc></url>
+<url><loc>http://127.0.0.1/sendgrid/SendGrid.addAttachment.html</loc></url>
+<url><loc>http://127.0.0.1/sendgrid/SendGrid.addAttachment.html</loc></url>
+<url><loc>http://127.0.0.1/sendgrid/SendGrid.addBCC.html</loc></url>
+<url><loc>http://127.0.0.1/sendgrid/SendGrid.addCC.html</loc></url>
+<url><loc>http://127.0.0.1/sendgrid/SendGrid.addContent.html</loc></url>
+<url><loc>http://127.0.0.1/sendgrid/SendGrid.addPersonalization.html</loc></url>
+<url><loc>http://127.0.0.1/sendgrid/SendGrid.from.html</loc></url>
+<url><loc>http://127.0.0.1/sendgrid/SendGrid.replyTo.html</loc></url>
+<url><loc>http://127.0.0.1/sendgrid/SendGrid.send.html</loc></url>
+<url><loc>http://127.0.0.1/sendgrid/SendGrid.sendAt.html</loc></url>
+<url><loc>http://127.0.0.1/sendgrid/SendGrid.SendResult.html</loc></url>
+<url><loc>http://127.0.0.1/sendgrid/SendGrid.SendResult.httpResponse.html</loc></url>
+<url><loc>http://127.0.0.1/sendgrid/SendGrid.SendResult.httpStatus.html</loc></url>
+<url><loc>http://127.0.0.1/sendgrid/SendGrid.SendResult.success.html</loc></url>
+<url><loc>http://127.0.0.1/sendgrid/SendGrid.SendResult.toString.html</loc></url>
+<url><loc>http://127.0.0.1/sendgrid/SendGrid.subject.html</loc></url>
+<url><loc>http://127.0.0.1/sendgrid/SendGrid.templateId.html</loc></url>
+<url><loc>http://127.0.0.1/sendgrid/SendGrid.this.html</loc></url>
+<url><loc>http://127.0.0.1/sendgrid/SendGridPersonalization.html</loc></url>
+<url><loc>http://127.0.0.1/sendgrid/SendGridPersonalization.addBCC.html</loc></url>
+<url><loc>http://127.0.0.1/sendgrid/SendGridPersonalization.addCC.html</loc></url>
+<url><loc>http://127.0.0.1/sendgrid/SendGridPersonalization.addSubstitution.html</loc></url>
+<url><loc>http://127.0.0.1/sendgrid/SendGridPersonalization.addTo.html</loc></url>
+<url><loc>http://127.0.0.1/sendgrid/SendGridPersonalization.sendAt.html</loc></url>
+<url><loc>http://127.0.0.1/sendgrid/SendGridPersonalization.subject.html</loc></url>
+<url><loc>http://127.0.0.1/sendgrid/SendGridPersonalization.this.html</loc></url>
+</urlset>

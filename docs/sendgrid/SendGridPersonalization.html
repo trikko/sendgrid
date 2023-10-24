@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0"/>
+		<title>Class SendGridPersonalization</title>
+		<link rel="stylesheet" href="../css/style.min.css"/>
+		<script type="text/javascript" src="../js/script.min.js"></script>
+	</head>
+	<body onload="setupDdox();">
+		<header></header>
+		<nav id="main-nav">
+			<div>
+				<noscript>
+					<p style="color: red">The search functionality needs JavaScript enabled</p>
+				</noscript>
+				<div id="symbolSearchPane" style="display: none">
+					<form action="#" method="GET">
+						<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(24);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();" autofocus/>
+					</form>
+					<ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="../symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "../";
+document.getElementById('symbolSearchPane').style.display = 'block';</script>
+				</div>
+				<ul class="tree-view">
+					<li>
+						<div class="module selected">
+							<a href="../sendgrid.html">sendgrid</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<p id="main-nav-footer">
+				Built with
+				<a href="https://github.com/MartinNowak/scod">scod</a>
+			</p>
+		</nav>
+		<div id="main-contents">
+			<div>
+				<h1>Class SendGridPersonalization</h1><p>SendGrid personalization
+</p>
+				<div class="prototype">
+					<code class="lang-d">
+						<div class="single-prototype">
+				<span class="kwd">class</span> <span class="typ">SendGridPersonalization</span>
+				<span class="pun">;</span>
+						</div>
+					</code>
+				</div>
+				<section><pre class="code"><code class="lang-d"><span class="kwd">auto </span><span class="pln">personalization </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">SendGridPersonalization</span><span class="pun">(</span><span class="str">"john@example.com"</span><span class="pun">, </span><span class="str">"John Doe"</span><span class="pun">);
+</span><span class="pln">personalization<wbr/></span><span class="pun">.</span><span class="pln">subject</span><span class="pun">(</span><span class="str">"Hello World"</span><span class="pun">);
+</span><span class="pln">personalization<wbr/></span><span class="pun">.</span><span class="pln">addSubstitution</span><span class="pun">(</span><span class="str">"name"</span><span class="pun">, </span><span class="str">"John Doe"</span><span class="pun">);</span></code></pre>
+</section>
+
+				<section><h2>Constructors</h2>
+					<table>
+						<col class="caption"/>
+						<tr>
+							<th>Name</th><th>Description</th>
+						</tr>
+						<tr>
+							<td>
+								<a href="../sendgrid/SendGridPersonalization.this.html" class="public">
+									<code>this</code>
+								</a>
+								<span class="tableEntryAnnotation">(toEmail, toName)</span>
+							</td>
+							<td>Constructor. At least one recipient is required
+</td>
+						</tr>
+					</table>
+				</section>
+				<section><h2>Methods</h2>
+					<table>
+						<col class="caption"/>
+						<tr>
+							<th>Name</th><th>Description</th>
+						</tr>
+						<tr>
+							<td>
+								<a href="../sendgrid/SendGridPersonalization.addBCC.html" class="public">
+									<code>addBCC</code>
+								</a>
+								<span class="tableEntryAnnotation">(email, name)</span>
+							</td>
+							<td>Add a BCC recipient
+</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="../sendgrid/SendGridPersonalization.addCC.html" class="public">
+									<code>addCC</code>
+								</a>
+								<span class="tableEntryAnnotation">(email, name)</span>
+							</td>
+							<td>Add a CC recipient
+</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="../sendgrid/SendGridPersonalization.addSubstitution.html" class="public">
+									<code>addSubstitution</code>
+								</a>
+								<span class="tableEntryAnnotation">(key, value)</span>
+							</td>
+							<td>Add a substitution to the message
+</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="../sendgrid/SendGridPersonalization.addTo.html" class="public">
+									<code>addTo</code>
+								</a>
+								<span class="tableEntryAnnotation">(email, name)</span>
+							</td>
+							<td>Add a recipient
+</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="../sendgrid/SendGridPersonalization.sendAt.html" class="public">
+									<code>sendAt</code>
+								</a>
+								<span class="tableEntryAnnotation">(time)</span>
+							</td>
+							<td>Set the time at which the message should be sent
+</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="../sendgrid/SendGridPersonalization.subject.html" class="public">
+									<code>subject</code>
+								</a>
+								<span class="tableEntryAnnotation">(subject)</span>
+							</td>
+							<td>Set the subject of the message
+</td>
+						</tr>
+					</table>
+				</section>
+				
+			</div>
+			<footer>
+				<div id="license-info">
+					<p>Andrea Fontana
+</p>
+
+					
+					<p>MIT
+</p>
+
+				</div>
+			</footer>
+		</div>
+	</body>
+</html>
