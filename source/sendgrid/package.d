@@ -123,7 +123,9 @@ class SendGrid
 	SendGrid addAttachment(string filename, string type = "text/plain")
 	{
 		import std.file : read;
-		addAttachment(cast(ubyte[])read(filename), filename, type);
+		import std.path : baseName;
+
+		addAttachment(cast(ubyte[])read(filename), baseName(filename), type);
 		return this;
 	}
 
