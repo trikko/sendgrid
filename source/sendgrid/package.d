@@ -10,6 +10,7 @@ import std.base64 	: Base64;
 import std.net.curl 	: HTTP;
 import std.string		: representation;
 import std.typecons	: No;
+import core.time		: seconds;
 
 import jsonwrap;
 
@@ -52,10 +53,37 @@ class SendGrid
 		alias success this;
 	}
 
+	/++ SendGrid servers. Use `eu` for accounts and subusers with EU data residency:
+	+ their API keys only work on the EU servers.
+	+/
+	enum Region
+	{
+		global,	/// api.sendgrid.com (default)
+		eu			/// api.eu.sendgrid.com
+	}
+
 	/// Constructor. It requires a valid API key
-	this(string apiKey)
+	this(string apiKey, Region region = Region.global)
 	{
 		this.apiKey = apiKey;
+		this._region = region;
+	}
+
+	/++ Send through the servers of a region
+	+ ---
+	+ auto result = new SendGrid("API_KEY")
+	+ 	.region(SendGrid.Region.eu)
+	+ 	.addPersonalization(new SendGridPersonalization("john@example.com", "John Doe"))
+	+ 	.from("you@example.com", "Your Name")
+	+ 	.subject("Hello World")
+	+ 	.addContent("<html><body><h1>Hello World</h1></body></html>", "text/html")
+	+ 	.send();
+	+ ---
+	+/
+	SendGrid region(Region region)
+	{
+		_region = region;
+		return this;
 	}
 
 	/++ Add a personalization to the message. At least one recipient is required.
@@ -162,7 +190,9 @@ class SendGrid
 
 		SendResult response;
 
-		HTTP http = HTTP("https://api.sendgrid.com/v3/mail/send");
+		HTTP http = HTTP((_region == Region.eu ? "https://api.eu.sendgrid.com" : "https://api.sendgrid.com") ~ "/v3/mail/send");
+		http.connectTimeout = 10.seconds;
+		http.operationTimeout = 60.seconds;
 		http.method = HTTP.Method.post;
 		http.addRequestHeader("Authorization", "Bearer " ~ apiKey);
 		http.addRequestHeader("Content-Type", "application/json");
@@ -192,7 +222,9 @@ class SendGrid
 		else
 		{
 			response._httpStatus = http.statusLine.code;
-			response._httpResponse = content.parseJSON;
+			// on success (202) the body is empty; errors come as JSON
+			try response._httpResponse = content.length ? content.parseJSON : JSONValue.init;
+			catch (Exception) response._httpResponse = JSONValue(content);
 		}
 
 		response._success = (response._httpStatus == 202);
@@ -204,6 +236,7 @@ class SendGrid
 
 	private JSONValue data = "{}".parseJSON;
 	private string 	apiKey;
+	private Region 	_region = Region.global;
 }
 
 
