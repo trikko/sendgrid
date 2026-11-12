@@ -30,31 +30,27 @@ document.getElementById('symbolSearchPane').style.display = 'block';</script>
 				</ul>
 			</div>
 			<p id="main-nav-footer">
-				Built with
-				<a href="https://github.com/MartinNowak/scod">scod</a>
+				Built with<a href="https://github.com/MartinNowak/scod">scod</a>
 			</p>
 		</nav>
 		<div id="main-contents">
 			<div>
-				<h1>Function SendGrid.SendResult.httpResponse</h1><p>HTTP response
+				<h1>Function SendGrid.SendResult.httpResponse</h1><p>HTTP response. On errors SendGrid replies with a JSON object.
+ If the request could not be completed, it is a string with the error message.
 </p>
 				<div class="prototype">
 					<code class="lang-d">
-						<div class="single-prototype">
-				<span class="pln">std<wbr/></span><span class="pun">.</span><span class="pln">json<wbr/></span><span class="pun">.</span><span class="typ">JSONValue</span> <span class="pln">httpResponse</span><span class="pun">(</span><span class="pun">)</span><span class="pun">;</span>
+						<div class="single-prototype"><span class="pln">std<wbr/></span><span class="pun">.</span><span class="pln">json<wbr/></span><span class="pun">.</span><span class="typ">JSONValue</span> <span class="pln">httpResponse</span><span class="pun">(</span><span class="pun">)</span><span class="pln"> </span><span class="kwd">@property</span><span class="pun">;</span>
 						</div>
 					</code>
 				</div>
-				
 				
 			</div>
 			<footer>
 				<div id="license-info">
 					<p>Andrea Fontana
 </p>
-
-					
-					<p>MIT
+<p>MIT
 </p>
 
 				</div>

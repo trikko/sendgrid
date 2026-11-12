@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0"/>
+		<title>Function SendGrid.region</title>
+		<link rel="stylesheet" href="../css/style.min.css"/>
+		<script type="text/javascript" src="../js/script.min.js"></script>
+	</head>
+	<body onload="setupDdox();">
+		<header></header>
+		<nav id="main-nav">
+			<div>
+				<noscript>
+					<p style="color: red">The search functionality needs JavaScript enabled</p>
+				</noscript>
+				<div id="symbolSearchPane" style="display: none">
+					<form action="#" method="GET">
+						<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(24);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();" autofocus/>
+					</form>
+					<ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="../symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "../";
+document.getElementById('symbolSearchPane').style.display = 'block';</script>
+				</div>
+				<ul class="tree-view">
+					<li>
+						<div class="module selected">
+							<a href="../sendgrid.html">sendgrid</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<p id="main-nav-footer">
+				Built with<a href="https://github.com/MartinNowak/scod">scod</a>
+			</p>
+		</nav>
+		<div id="main-contents">
+			<div>
+				<h1>Function SendGrid.region</h1><p>Send through the servers of a region
+</p>
+				<div class="prototype">
+					<code class="lang-d">
+						<div class="single-prototype">
+				<a href="../sendgrid/SendGrid.html"><span class="typ">SendGrid</span></a> <span class="pln">region</span><span class="pun">(</span>
+				<br/>&nbsp;&nbsp;<a href="../sendgrid/SendGrid.Region.html"><span class="typ">SendGrid<wbr/></span><span class="pun">.<wbr/></span><span class="typ">Region</span></a> <span class="pln">region</span>
+				<br/>
+				<span class="pun">)</span><span class="pun">;</span>
+						</div>
+					</code>
+				</div>
+				<section><pre class="code"><code class="lang-d"><span class="kwd">auto </span><span class="pln">result </span><span class="pun">= </span><span class="kwd">new <a href="../sendgrid/SendGrid.html"></span><span class="typ">SendGrid</span></a><span class="pun">(</span><span class="str">"API_KEY"</span><span class="pun">)
+	<wbr/>.</span><span class="pln">region</span><span class="pun">(<a href="../sendgrid/SendGrid.Region.html#eu"></span><span class="typ">SendGrid<wbr/></span><span class="pun">.</span><span class="typ">Region<wbr/></span><span class="pun">.</span><span class="pln">eu</span></a><span class="pun">)
+	<wbr/>.</span><span class="pln">addPersonalization</span><span class="pun">(</span><span class="kwd">new <a href="../sendgrid/SendGridPersonalization.html"></span><span class="typ">SendGridPersonalization</span></a><span class="pun">(</span><span class="str">"john@example.com"</span><span class="pun">, </span><span class="str">"John Doe"</span><span class="pun">))
+	<wbr/>.</span><span class="pln">from</span><span class="pun">(</span><span class="str">"you@example.com"</span><span class="pun">, </span><span class="str">"Your Name"</span><span class="pun">)
+	<wbr/>.</span><span class="pln">subject</span><span class="pun">(</span><span class="str">"Hello World"</span><span class="pun">)
+	<wbr/>.</span><span class="pln">addContent</span><span class="pun">(</span><span class="str">"&lt;html&gt;&lt;body&gt;&lt;h1&gt;Hello World&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;"</span><span class="pun">, </span><span class="str">"text/html"</span><span class="pun">)
+	<wbr/>.</span><span class="pln">send</span><span class="pun">();</span></code></pre>
+</section>
+
+			</div>
+			<footer>
+				<div id="license-info">
+					<p>Andrea Fontana
+</p>
+<p>MIT
+</p>
+
+				</div>
+			</footer>
+		</div>
+	</body>
+</html>

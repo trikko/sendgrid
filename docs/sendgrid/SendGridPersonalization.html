@@ -30,8 +30,7 @@ document.getElementById('symbolSearchPane').style.display = 'block';</script>
 				</ul>
 			</div>
 			<p id="main-nav-footer">
-				Built with
-				<a href="https://github.com/MartinNowak/scod">scod</a>
+				Built with<a href="https://github.com/MartinNowak/scod">scod</a>
 			</p>
 		</nav>
 		<div id="main-contents">
@@ -41,14 +40,13 @@ document.getElementById('symbolSearchPane').style.display = 'block';</script>
 				<div class="prototype">
 					<code class="lang-d">
 						<div class="single-prototype">
-				<span class="kwd">class</span> <span class="typ">SendGridPersonalization</span>
-				<span class="pun">;</span>
+				<span class="kwd">class</span> <span class="typ">SendGridPersonalization</span><span class="pun">;</span>
 						</div>
 					</code>
 				</div>
 				<section><pre class="code"><code class="lang-d"><span class="kwd">auto </span><span class="pln">personalization </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">SendGridPersonalization</span><span class="pun">(</span><span class="str">"john@example.com"</span><span class="pun">, </span><span class="str">"John Doe"</span><span class="pun">);
 </span><span class="pln">personalization<wbr/></span><span class="pun">.</span><span class="pln">subject</span><span class="pun">(</span><span class="str">"Hello World"</span><span class="pun">);
-</span><span class="pln">personalization<wbr/></span><span class="pun">.</span><span class="pln">addSubstitution</span><span class="pun">(</span><span class="str">"name"</span><span class="pun">, </span><span class="str">"John Doe"</span><span class="pun">);</span></code></pre>
+</span><span class="pln">personalization<wbr/></span><span class="pun">.</span><span class="pln">addDynamicTemplateData</span><span class="pun">(</span><span class="str">"name"</span><span class="pun">, </span><span class="str">"John Doe"</span><span class="pun">);</span></code></pre>
 </section>
 
 				<section><h2>Constructors</h2>
@@ -97,12 +95,22 @@ document.getElementById('symbolSearchPane').style.display = 'block';</script>
 						</tr>
 						<tr>
 							<td>
+								<a href="../sendgrid/SendGridPersonalization.addDynamicTemplateData.html" class="public">
+									<code>addDynamicTemplateData</code>
+								</a>
+								<span class="tableEntryAnnotation">(key, value)</span>
+							</td>
+							<td>Add a value for a dynamic template (see <code class="lang-d"><a href="../sendgrid/SendGrid.templateId.html"><span class="typ">SendGrid<wbr/></span><span class="pun">.</span><span class="pln">templateId</span></a></code>)
+</td>
+						</tr>
+						<tr>
+							<td>
 								<a href="../sendgrid/SendGridPersonalization.addSubstitution.html" class="public">
 									<code>addSubstitution</code>
 								</a>
 								<span class="tableEntryAnnotation">(key, value)</span>
 							</td>
-							<td>Add a substitution to the message
+							<td>Add a substitution (legacy templates): every <code class="lang-d"><a href="../sendgrid/SendGridPersonalization.addSubstitution.html#key"><span class="pln">key</span></a></code> in the message is replaced with <code class="lang-d"><a href="../sendgrid/SendGridPersonalization.addSubstitution.html#value"><span class="pln">value</span></a></code>
 </td>
 						</tr>
 						<tr>
@@ -113,6 +121,16 @@ document.getElementById('symbolSearchPane').style.display = 'block';</script>
 								<span class="tableEntryAnnotation">(email, name)</span>
 							</td>
 							<td>Add a recipient
+</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="../sendgrid/SendGridPersonalization.dynamicTemplateData.html" class="public">
+									<code>dynamicTemplateData</code>
+								</a>
+								<span class="tableEntryAnnotation">(value)</span>
+							</td>
+							<td>Set all the data for a dynamic template at once. It must be a JSON object.
 </td>
 						</tr>
 						<tr>
@@ -137,15 +155,12 @@ document.getElementById('symbolSearchPane').style.display = 'block';</script>
 						</tr>
 					</table>
 				</section>
-				
 			</div>
 			<footer>
 				<div id="license-info">
 					<p>Andrea Fontana
 </p>
-
-					
-					<p>MIT
+<p>MIT
 </p>
 
 				</div>

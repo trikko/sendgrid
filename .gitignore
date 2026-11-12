@@ -13,3 +13,5 @@ sendgrid-test-*
 *.o
 *.obj
 *.lst
+libsendgrid.a
+dub.selections.json

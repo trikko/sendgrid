@@ -30,8 +30,7 @@ document.getElementById('symbolSearchPane').style.display = 'block';</script>
 				</ul>
 			</div>
 			<p id="main-nav-footer">
-				Built with
-				<a href="https://github.com/MartinNowak/scod">scod</a>
+				Built with<a href="https://github.com/MartinNowak/scod">scod</a>
 			</p>
 		</nav>
 		<div id="main-contents">
@@ -41,8 +40,7 @@ document.getElementById('symbolSearchPane').style.display = 'block';</script>
 				<div class="prototype">
 					<code class="lang-d">
 						<div class="single-prototype">
-				<span class="kwd">class</span> <span class="typ">SendGrid</span>
-				<span class="pun">;</span>
+				<span class="kwd">class</span> <span class="typ">SendGrid</span><span class="pun">;</span>
 						</div>
 					</code>
 				</div>
@@ -65,7 +63,7 @@ document.getElementById('symbolSearchPane').style.display = 'block';</script>
 								<a href="../sendgrid/SendGrid.this.html" class="public">
 									<code>this</code>
 								</a>
-								<span class="tableEntryAnnotation">(apiKey)</span>
+								<span class="tableEntryAnnotation">(apiKey, region)</span>
 							</td>
 							<td>Constructor. It requires a valid API key
 </td>
@@ -85,7 +83,19 @@ document.getElementById('symbolSearchPane').style.display = 'block';</script>
 								</a>
 								<span class="tableEntryAnnotation">(content, filename, type)</span>
 							</td>
-							<td>Add an attachment to the message
+							<td>Add an attachment to the message.
+ If <code class="lang-d"><a href="../sendgrid/SendGrid.addAttachment.html#type"><span class="pln">type</span></a></code> is empty, the MIME type is guessed from the file extension.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="../sendgrid/SendGrid.addAttachment.html" class="public">
+									<code>addAttachment</code>
+								</a>
+								<span class="tableEntryAnnotation">(filename, type)</span>
+							</td>
+							<td>Read a file from disk and add it as attachment to the message.
+ If <code class="lang-d"><a href="../sendgrid/SendGrid.addAttachment.html#type"><span class="pln">type</span></a></code> is empty, the MIME type is guessed from the file extension.
 </td>
 						</tr>
 						<tr>
@@ -95,7 +105,9 @@ document.getElementById('symbolSearchPane').style.display = 'block';</script>
 								</a>
 								<span class="tableEntryAnnotation">(email, name)</span>
 							</td>
-							<td>Add a BCC recipient
+							<td>Add a BCC recipient to every personalization of the message.
+ SendGrid accepts BCC recipients only inside personalizations: this is a shortcut.
+ Addresses already present in a personalization are skipped.
 </td>
 						</tr>
 						<tr>
@@ -105,7 +117,9 @@ document.getElementById('symbolSearchPane').style.display = 'block';</script>
 								</a>
 								<span class="tableEntryAnnotation">(email, name)</span>
 							</td>
-							<td>Add a CC recipient
+							<td>Add a CC recipient to every personalization of the message.
+ SendGrid accepts CC recipients only inside personalizations: this is a shortcut.
+ Addresses already present in a personalization are skipped.
 </td>
 						</tr>
 						<tr>
@@ -116,6 +130,7 @@ document.getElementById('symbolSearchPane').style.display = 'block';</script>
 								<span class="tableEntryAnnotation">(value, type)</span>
 							</td>
 							<td>Add a content to the message. More than one content can be added.
+ <code class="lang-d"><span class="pln">text</span><span class="pun">/</span><span class="pln">plain</span></code> content is always sent first, then <code class="lang-d"><span class="pln">text</span><span class="pun">/</span><span class="pln">html</span></code>, as required by SendGrid.
 </td>
 						</tr>
 						<tr>
@@ -123,7 +138,7 @@ document.getElementById('symbolSearchPane').style.display = 'block';</script>
 								<a href="../sendgrid/SendGrid.addPersonalization.html" class="public">
 									<code>addPersonalization</code>
 								</a>
-								<span class="tableEntryAnnotation">(SendGridPersonalization)</span>
+								<span class="tableEntryAnnotation">(personalization)</span>
 							</td>
 							<td>Add a personalization to the message. At least one recipient is required.
 </td>
@@ -140,12 +155,22 @@ document.getElementById('symbolSearchPane').style.display = 'block';</script>
 						</tr>
 						<tr>
 							<td>
+								<a href="../sendgrid/SendGrid.region.html" class="public">
+									<code>region</code>
+								</a>
+								<span class="tableEntryAnnotation">(region)</span>
+							</td>
+							<td>Send through the servers of a region
+</td>
+						</tr>
+						<tr>
+							<td>
 								<a href="../sendgrid/SendGrid.replyTo.html" class="public">
 									<code>replyTo</code>
 								</a>
 								<span class="tableEntryAnnotation">(email, name)</span>
 							</td>
-							<td>Set the reply-to addres of the message
+							<td>Set the reply-to address of the message
 </td>
 						</tr>
 						<tr>
@@ -207,15 +232,30 @@ document.getElementById('symbolSearchPane').style.display = 'block';</script>
 						</tr>
 					</table>
 				</section>
-				
+				<section><h2>Enums</h2>
+					<table>
+						<col class="caption"/>
+						<tr>
+							<th>Name</th><th>Description</th>
+						</tr>
+						<tr>
+							<td>
+								<a href="../sendgrid/SendGrid.Region.html" class="public">
+									<code>Region</code>
+								</a>
+							</td>
+							<td>SendGrid servers. Use <code class="lang-d"><a href="../sendgrid/SendGrid.Region.html#eu"><span class="pln">eu</span></a></code> for accounts and subusers with EU data residency:
+ their API keys only work on the EU servers.
+</td>
+						</tr>
+					</table>
+				</section>
 			</div>
 			<footer>
 				<div id="license-info">
 					<p>Andrea Fontana
 </p>
-
-					
-					<p>MIT
+<p>MIT
 </p>
 
 				</div>

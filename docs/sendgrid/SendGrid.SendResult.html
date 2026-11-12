@@ -30,8 +30,7 @@ document.getElementById('symbolSearchPane').style.display = 'block';</script>
 				</ul>
 			</div>
 			<p id="main-nav-footer">
-				Built with
-				<a href="https://github.com/MartinNowak/scod">scod</a>
+				Built with<a href="https://github.com/MartinNowak/scod">scod</a>
 			</p>
 		</nav>
 		<div id="main-contents">
@@ -41,8 +40,7 @@ document.getElementById('symbolSearchPane').style.display = 'block';</script>
 				<div class="prototype">
 					<code class="lang-d">
 						<div class="single-prototype">
-				<span class="kwd">struct</span> <span class="typ">SendResult</span>
-				<span class="pun">;</span>
+				<span class="kwd">struct</span> <span class="typ">SendResult</span><span class="pun">;</span>
 						</div>
 					</code>
 				</div>
@@ -55,6 +53,21 @@ document.getElementById('symbolSearchPane').style.display = 'block';</script>
 						<col class="caption"/>
 						<tr>
 							<th>Name</th><th>Type</th><th>Description</th>
+						</tr>
+						<tr>
+							<td>
+								<a href="../sendgrid/SendGrid.SendResult.httpResponse.html" class="public property"><code>httpResponse</code></a><span class="tableEntryAnnotation">[get]</span>
+							</td>
+							<td class="typecol"><code class="prettyprint lang-d"><span class="pln">std<wbr/></span><span class="pun">.</span><span class="pln">json<wbr/></span><span class="pun">.</span><span class="typ">JSONValue</span></code></td><td>HTTP response. On errors SendGrid replies with a JSON object.
+ If the request could not be completed, it is a string with the error message.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="../sendgrid/SendGrid.SendResult.httpStatus.html" class="public property"><code>httpStatus</code></a><span class="tableEntryAnnotation">[get]</span>
+							</td>
+							<td class="typecol"><code class="prettyprint lang-d"><span class="typ">int</span></code></td><td>HTTP status code, or -1 if the request could not be completed (network error, timeout, ...)
+</td>
 						</tr>
 						<tr>
 							<td>
@@ -73,26 +86,6 @@ document.getElementById('symbolSearchPane').style.display = 'block';</script>
 						</tr>
 						<tr>
 							<td>
-								<a href="../sendgrid/SendGrid.SendResult.httpResponse.html" class="public">
-									<code>httpResponse</code>
-								</a>
-								<span class="tableEntryAnnotation">()</span>
-							</td>
-							<td>HTTP response
-</td>
-						</tr>
-						<tr>
-							<td>
-								<a href="../sendgrid/SendGrid.SendResult.httpStatus.html" class="public">
-									<code>httpStatus</code>
-								</a>
-								<span class="tableEntryAnnotation">()</span>
-							</td>
-							<td>HTTP status code
-</td>
-						</tr>
-						<tr>
-							<td>
 								<a href="../sendgrid/SendGrid.SendResult.toString.html" class="public">
 									<code>toString</code>
 								</a>
@@ -103,15 +96,12 @@ document.getElementById('symbolSearchPane').style.display = 'block';</script>
 						</tr>
 					</table>
 				</section>
-				
 			</div>
 			<footer>
 				<div id="license-info">
 					<p>Andrea Fontana
 </p>
-
-					
-					<p>MIT
+<p>MIT
 </p>
 
 				</div>
